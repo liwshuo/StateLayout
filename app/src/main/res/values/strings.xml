@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">StateLayout</string>
+    <string name="state_content">Content</string>
+    <string name="state_empty">Empty</string>
+    <string name="state_error">Error</string>
+    <string name="state_loading">Loading</string>
+    <string name="state_offline">Offline</string>
+    <string name="state_custom1">Custom1</string>
+    <string name="state_custom2">Custom2</string>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.baymax.statelayout.StateLayout
+        android:id="@+id/state_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:contentSrc="@layout/main_content_src"
+        app:emptySrc="@layout/main_empty_src"
+        app:errorSrc="@layout/main_error_src"
+        app:loadingSrc="@layout/main_loading_src"
+        app:offlineSrc="@layout/main_offline_src"/>
+    <Button
+        android:id="@+id/custom1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/state_custom1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/custom2"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <Button
+        android:id="@+id/custom2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/state_custom2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/custom1"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/state_loading"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/custom1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/offline"
+        app:layout_constraintHorizontal_chainStyle="spread"/>
+    <Button
+        android:id="@+id/offline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/state_offline"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/custom1"
+        app:layout_constraintLeft_toRightOf="@id/loading"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/state_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/loading"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/empty"
+        app:layout_constraintHorizontal_chainStyle="spread" />
+    <Button
+        android:id="@+id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/state_empty"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/loading"
+        app:layout_constraintLeft_toRightOf="@id/content"
+        app:layout_constraintRight_toLeftOf="@id/error"/>
+    <Button
+        android:id="@+id/error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/state_error"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/loading"
+        app:layout_constraintLeft_toRightOf="@id/empty"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

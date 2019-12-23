@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="StateLayout" tools:ignore="ResourceName">
+        <attr name="loadingSrc" format="reference"/>
+        <attr name="contentSrc" format="reference"/>
+        <attr name="offlineSrc" format="reference"/>
+        <attr name="emptySrc" format="reference"/>
+        <attr name="errorSrc" format="reference"/>
+        <attr name="useInTransition" format="boolean"/>
+        <attr name="useOutTransition" format="boolean"/>
+    </declare-styleable>
+</resources>
