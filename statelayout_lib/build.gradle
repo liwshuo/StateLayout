@@ -1,4 +1,27 @@
 apply plugin: 'com.android.library'
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'statelayout'
+
+    publishedGroupId = 'com.baymax.statelayout'
+    libraryName = 'statelayout'
+    artifact = 'statelayout'
+
+    libraryDescription = 'StateLayout提供了便捷的异常页面添加和展示方法，可以灵活地设置异常页面的响应时间。将不同的异常页面分拆到不同的布局文件中，便于后期的管理和复用。'
+
+    siteUrl = 'https://github.com/liwshuo/StateLayout'
+    gitUrl = 'https://github.com/liwshuo/StateLayout.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'baymax'
+    developerName = 'lishuo'
+    developerEmail = 'liwshuo@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 
 android {
     compileSdkVersion 28
@@ -27,8 +50,10 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.annotation:annotation:1.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 }
+apply from: '../install.gradle'
+apply from: '../bintray.gradle'
