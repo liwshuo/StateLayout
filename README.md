@@ -3,6 +3,11 @@
 
 遇到这些情况，可能会使用一个或者多个布局来根据状态控制其展示和隐藏。这样在布局文件中，就会include多个异常状态的布局文件；在Java代码中，也会保存多个View实例以便控制其显示状态。这种写法略显不便和臃肿。为了解决这个问题，可以使用[StateLayout](https://github.com/liwshuo/StateLayout)。
 
+## 引用方法
+
+gradle文件中添加：
+`implementation 'com.baymax.statelayout:statelayout:1.0.0'`
+
 ## 添加异常页面
 StateLayout可以非常便捷地添加异常页面、控制异常页面的展示。其默认提供了5种状态可供使用，已经覆盖了大多数的使用场景。
 * Content，展示内容页面。
